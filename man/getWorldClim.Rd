@@ -23,6 +23,6 @@ in a raster stack.
 Downloads bioclimatic data from WorldClim
 }
 \examples{
-world_clim <- getWorldClim(res = 0.5,country = "Czech Republic",
+worldclim <- getWorldClim(res = 0.5,country = "Czech Republic",
 path = getwd())
 }

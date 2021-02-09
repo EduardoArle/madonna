@@ -12,7 +12,7 @@
 #' @return This function downloads all 19 climatic variables and returns them
 #' in a raster stack.
 #' @examples
-#' world_clim <- getWorldClim(res = 0.5,country = "Czech Republic",
+#' worldclim <- getWorldClim(res = 0.5,country = "Czech Republic",
 #' path = getwd())
 #' @export
 getWorldClim <- function(res,country,path) {
