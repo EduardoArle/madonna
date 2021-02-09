@@ -10,8 +10,8 @@
 #' @importFrom bRacatus giveOcc occSpatialPoints
 #' @param occ table containing columns with the species name, longitude, and
 #' latitude
-#' @param specie character, name of the column containing species names,
-#' default is "species".
+#' @param location character, name of the column containing location IDs,
+#' default is "location".
 #' @param lon character, name of the longitude column, default is "lon".
 #' @param lat character, name of the latitude column, default is "lat".
 #' @param colours character, options are "bicha" or "standard". Default is
@@ -22,15 +22,14 @@
 #' worldclim <- getWorldClim(res = 0.5,country = "Czech Republic",
 #' path = getwd())
 #' @export
-plotPoints <- function(occ,species="species",lon="lon",lat="lat",
+plotPoints <- function(occ,location="location",lon="lon",lat="lat",
                        colours = "bicha") {
   oldpar <- par(no.readonly = TRUE)
   on.exit(par(oldpar))
-  occ2 <- giveOcc(occ,"species","lon","lat")
   world <- getMap(resolution = "low")
   world <- suppressWarnings(gBuffer(world, byid = TRUE, width = 0))
-  occ2 <- giveOcc(occ,"species","lon","lat")
   occ_sp <- occSpatialPoints(occ2)
+  occ2 <- giveOcc(occ,location,lon,lat)
   countries <- unique(over(occ_sp,world)$NAME)
   countries <- world[world$NAME %in% countries,]
   CP <- as(extent(countries), "SpatialPolygons")
