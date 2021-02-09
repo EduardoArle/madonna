@@ -2,10 +2,8 @@
 #'
 #' Extracts bioclimatic data from WorldClim layers for data points.
 #'
-#' @importFrom bRacatus giveOcc
-#' @importFrom bRacatus occSpatialPoints
-#' @importFrom raster extract
-#' @importFrom raster stack
+#' @importFrom bRacatus giveOcc occSpatialPoints
+#' @importFrom raster extract stack
 #' @param path character, the path to the folder containing the variables
 #' @param occ table containing columns with the species name, longitude, and
 #' latitude

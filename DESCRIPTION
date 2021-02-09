@@ -17,4 +17,7 @@ RoxygenNote: 7.1.1
 Imports: 
     raster,
     rworldmap,
-    bRacatus
+    bRacatus,
+    graphics,
+    rgeos,
+    sp
