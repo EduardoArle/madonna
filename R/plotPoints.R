@@ -28,8 +28,8 @@ plotPoints <- function(occ,location="location",lon="lon",lat="lat",
   on.exit(par(oldpar))
   world <- getMap(resolution = "low")
   world <- suppressWarnings(gBuffer(world, byid = TRUE, width = 0))
-  occ_sp <- occSpatialPoints(occ2)
   occ2 <- giveOcc(occ,location,lon,lat)
+  occ_sp <- occSpatialPoints(occ2)
   countries <- unique(over(occ_sp,world)$NAME)
   countries <- world[world$NAME %in% countries,]
   CP <- as(extent(countries), "SpatialPolygons")

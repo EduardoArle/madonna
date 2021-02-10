@@ -23,6 +23,7 @@ extractValues <- function(path,occ,location="location",
   vars <- stack(list.files(pattern = ".bil"))
   
   values <- extract(variables,t2)
+  table <- cbind(t,values)
   
-  return(values)
+  return(table)
 }
