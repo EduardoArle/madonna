@@ -4,7 +4,7 @@
 \alias{extractValues}
 \title{extractValues}
 \usage{
-extractValues(path, occ, species = "species", lon = "lon", lat = "lat")
+extractValues(path, occ, location = "location", lon = "lon", lat = "lat")
 }
 \arguments{
 \item{path}{character, the path to the folder containing the variables}
@@ -12,12 +12,12 @@ extractValues(path, occ, species = "species", lon = "lon", lat = "lat")
 \item{occ}{table containing columns with the species name, longitude, and
 latitude}
 
+\item{location}{character, name of the column containing location IDs,
+default is "species".}
+
 \item{lon}{character, name of the longitude column, default is "lon".}
 
 \item{lat}{character, name of the latitude column, default is "lat".}
-
-\item{specie}{character, name of the column containing species names,
-default is "species".}
 }
 \value{
 This function returns the values for variables in each point.

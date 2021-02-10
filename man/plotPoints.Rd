@@ -6,7 +6,7 @@
 \usage{
 plotPoints(
   occ,
-  species = "species",
+  location = "location",
   lon = "lon",
   lat = "lat",
   colours = "bicha"
@@ -16,15 +16,15 @@ plotPoints(
 \item{occ}{table containing columns with the species name, longitude, and
 latitude}
 
+\item{location}{character, name of the column containing location IDs,
+default is "location".}
+
 \item{lon}{character, name of the longitude column, default is "lon".}
 
 \item{lat}{character, name of the latitude column, default is "lat".}
 
 \item{colours}{character, options are "bicha" or "standard". Default is
 "bicha"}
-
-\item{specie}{character, name of the column containing species names,
-default is "species".}
 }
 \value{
 This function downloads all 19 climatic variables and returns them
